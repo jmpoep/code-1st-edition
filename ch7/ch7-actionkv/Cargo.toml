@@ -1,0 +1,17 @@
+[package]
+name = "actionkv"
+version = "1.0.0"
+authors = ["Tim McNamara <author@rustinaction.com>"]
+edition = "2018"
+
+[dependencies]
+byteorder = "1.2"        # <1>
+crc = "1.7"              # <2>
+
+[lib]                    # <3>
+name = "libactionkv"     # <3>
+path = "src/lib.rs"      # <3>
+
+[[bin]]                  # <4>
+name = "akv_mem"
+path = "src/akv_mem.rs"
